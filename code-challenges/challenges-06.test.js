@@ -115,8 +115,11 @@ describe('Testing challenge 4', () => {
 });
 ------------------------------------------------------------------------------------------------ */
 
+const a = { fullName: 'Octavia Butler' };
 const addBirthYearProperty = (obj, year) => {
+ obj.yearBorn = year 
   // Solution code here...
+  // return a
 };
 
 /* ------------------------------------------------------------------------------------------------
