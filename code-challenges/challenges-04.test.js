@@ -75,6 +75,12 @@ CHALLENGE 3
 Write a function called sortNumbers that takes an array of numbers and sorts them from smallest to largest.
 
 HINT: Beware... JS default is "Lexical" ordering.
+
+describe('Testing challenge 3', () => {
+  test('It should sort low-to-high the numbers in an array', () => {
+    expect(sortNumbers([8, 3, 2, 9, 12, 1, 115])).toStrictEqual([1, 2, 3, 8, 9, 12, 115]);
+  });
+});
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbers = (arr) => {
