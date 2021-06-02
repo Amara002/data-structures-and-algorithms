@@ -33,7 +33,17 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-}
+  starWarsArr.sort((a,b)=>{
+    if(parseInt(a.height) > parseInt(b.height)){
+      return -1;
+    }
+    else if(parseInt(a.height) < parseInt(b.height)){
+      return 1;
+    }
+    else return 0;
+  });
+  return starWarsArr;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -49,10 +59,10 @@ describe('Testing challenge 2', () => {
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-
   // Solution code here...
+  arr.splice(idx,3);
+  return arr;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -87,6 +97,9 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
+  for (let i = 0; i <= str.length; i++) {
+    result.push(str.split('').slice(i).join(''));
+  }
   return result;
 };
 
@@ -100,6 +113,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  return arr.split('');
 };
 
 
