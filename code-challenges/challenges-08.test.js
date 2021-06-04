@@ -8,6 +8,13 @@ Use the characters data below for all of the challenges except challenge 2 and 3
 
 Write a function named sortByChildren that sorts the characters below by the number of children in each house (fewest to most). If a house has the same number of children, sort alphabetically by house name.
 
+describe('Testing challenge 1', () => {
+  test('It should sort the characters by number of children', () => {
+    expect(sortByChildren(characters)[0].name).toStrictEqual('Euron');
+    expect(sortByChildren(characters)[0].children.length).toStrictEqual(0);
+  });
+});
+
 ------------------------------------------------------------------------------------------------ */
 let characters = [
   {
@@ -56,8 +63,19 @@ let characters = [
 
 const sortByChildren = (charArray) => {
   // Solution code here...
-};
+  let newArr=[];
+  newArr=charArray.sort((a,b)=>{
+    if(a.children.length>b.children.length){
+      return 1;
 
+    }else if(a.children.length<b.children.length){
+      return -1;
+    }else{
+      return 0;
+    }
+  });
+  return newArr;
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
